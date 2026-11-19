@@ -1,0 +1,17 @@
+{
+  "name": "discord-photo-bot-cloudflare",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Discord photo posts through Cloudflare Workers, Queues, and D1.",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "register": "node scripts/register-commands.mjs",
+    "import-settings": "node scripts/import-settings.mjs",
+    "check": "wrangler deploy --dry-run"
+  },
+  "devDependencies": { "wrangler": "4.155.0" }
+}

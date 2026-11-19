@@ -1,0 +1,5 @@
+{
+  "bot_token": "PASTE_YOUR_BOT_TOKEN_HERE",
+  "controller_user_id": "PASTE_YOUR_PERSONAL_DISCORD_USER_ID_HERE",
+  "server_id": "PASTE_YOUR_DISCORD_SERVER_ID_HERE"
+}

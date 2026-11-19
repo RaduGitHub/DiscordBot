@@ -1,0 +1,5 @@
+# Copy this file to .dev.vars for local development and command registration.
+# This file is NOT the production secret store; add both production secrets
+# separately with "npx wrangler secret put NAME" as described in README.md.
+DISCORD_TOKEN="PASTE_YOUR_BOT_TOKEN"
+DISCORD_PUBLIC_KEY="PASTE_APPLICATION_PUBLIC_KEY"

@@ -1,0 +1,36 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "discord-photo-bot",
+  "main": "src/worker.mjs",
+  "compatibility_date": "2026-10-29",
+  "workers_dev": true,
+  "vars": {
+    "DISCORD_APPLICATION_ID": "PASTE_APPLICATION_ID",
+    "DISCORD_GUILD_ID": "PASTE_SERVER_ID",
+    "CONTROLLER_USER_ID": "PASTE_YOUR_PERSONAL_USER_ID"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "photo-bot",
+      "database_id": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "queues": {
+    "producers": [
+      {
+        "binding": "JOBS",
+        "queue": "discord-photo-bot-jobs"
+      }
+    ],
+    "consumers": [
+      {
+        "queue": "discord-photo-bot-jobs",
+        "max_batch_size": 1,
+        "max_batch_timeout": 1,
+        "max_concurrency": 1,
+        "max_retries": 0
+      }
+    ]
+  }
+}
